@@ -22,7 +22,7 @@ const router = createRouter({
             component: Projectspage
         },
         {
-            path: '/show/:title',
+            path: '/show/:id',
             name: 'showProject',
             component: ShowProjectpage
         },

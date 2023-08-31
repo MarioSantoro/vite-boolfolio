@@ -17,7 +17,7 @@
                             <p v-for="technology in project.technologies" class="card-text">{{ technology.name }}
                             </p>
                         </div>
-                        <router-link :to="{ name: 'showProject', params: { title: project.title } }">
+                        <router-link :to="{ name: 'showProject', params: { id: project.id } }">
                             <button class="btn btn-primary">View</button>
                         </router-link>
 
