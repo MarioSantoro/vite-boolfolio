@@ -1,5 +1,6 @@
 <script>
-import AppMain from './components/AppMain.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   data() {
@@ -8,15 +9,20 @@ export default {
     }
   },
   components: {
-    AppMain,
+    AppHeader,
+    AppFooter,
   }
 }
 </script>
 
 <template>
-  <AppMain />
+  <AppHeader />
+  <router-view>
+  </router-view>
+  <AppFooter />
 </template>
 
 <style lang="scss">
+@use "bootstrap/scss/bootstrap" as *;
 @use './assets/styles/generall.scss' as *;
 </style>
