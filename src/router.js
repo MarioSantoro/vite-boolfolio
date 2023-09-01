@@ -3,6 +3,7 @@ import Homepage from './pages/Homepage.vue';
 import Aboutuspage from './pages/Aboutuspage.vue';
 import Projectspage from './pages/Projectspage.vue'
 import ShowProjectpage from './pages/ShowProjectpage.vue'
+import RegisterPage from './pages/Registerpage.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -25,6 +26,11 @@ const router = createRouter({
             path: '/show/:id',
             name: 'showProject',
             component: ShowProjectpage
+        },
+        {
+            path: '/register',
+            name: 'Register',
+            component: RegisterPage
         },
     ]
 });

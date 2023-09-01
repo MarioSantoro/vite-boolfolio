@@ -20,7 +20,6 @@
                         <router-link :to="{ name: 'showProject', params: { id: project.id } }">
                             <button class="btn btn-primary">View</button>
                         </router-link>
-
                     </div>
                 </div>
             </div>

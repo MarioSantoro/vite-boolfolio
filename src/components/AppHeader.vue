@@ -1,10 +1,14 @@
 <template>
     <nav class="navbar-guests">
-        <ul class="d-flex justify-content-center list-unstyled gap-3">
-            <li v-for="link in links">
-                <router-link :to="{ name: link.name }">{{ link.link }}</router-link>
-            </li>
-        </ul>
+        <div class="container d-flex align-items-center justify-content-between">
+            <router-link class="navbar-brand guest" :to="{ name: 'Homepage' }">Mario
+                Santoro</router-link>
+            <ul class="d-flex list-unstyled m-0">
+                <li v-for="link in links">
+                    <router-link class="link" :to="{ name: link.name }">{{ link.link }}</router-link>
+                </li>
+            </ul>
+        </div>
     </nav>
 </template>
 <script>
@@ -24,6 +28,10 @@ export default {
                     'name': 'Projects',
                     'link': 'Projects'
                 },
+                {
+                    'name': 'Register',
+                    'link': 'Register'
+                },
             ]
         }
     }
@@ -36,12 +44,24 @@ nav.navbar-guests {
     z-index: 5;
     width: 100%;
 
-    a {
+    a.guest {
         font-size: 1.125rem;
         text-decoration: none;
         color: white;
         margin-left: 0;
         cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    a.link {
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 4rem;
+        transition: all 0.4s;
+        font-weight: 700;
     }
 }
 </style>
